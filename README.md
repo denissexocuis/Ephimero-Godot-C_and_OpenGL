@@ -1,2 +1,2 @@
-# 'Ephimero' Godot-C-OpenGL
+# 'Ephimero' Godot, C & OpenGL
 Proyecto final de la materia "Graficación por computadora"
