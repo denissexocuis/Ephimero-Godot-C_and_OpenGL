@@ -1,7 +1,7 @@
 # 'Ephimero' Godot, C & OpenGL
 Es un videojuego en 2D que explora los conceptos de **aceptación, incertidumbre y lucha interna entre el protagonista y lo incontrolable.**
 
-![Alt text](https://img.youtube.com/vi/2f9nhj0eUHs&t=27s/0.jpg)](https://www.youtube.com/watch?v=2f9nhj0eUHs&t=27s)
+[![Gameplay](https://img.youtube.com/vi/2f9nhj0eUHs&t=27s/0.jpg)](https://www.youtube.com/watch?v=2f9nhj0eUHs&t=27s)
 
 ---
 
