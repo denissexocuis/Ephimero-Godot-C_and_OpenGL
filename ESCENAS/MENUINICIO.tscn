@@ -1,0 +1,170 @@
+[gd_scene load_steps=16 format=3 uid="uid://5qfr4yif1wtx"]
+
+[ext_resource type="Script" path="res://ESCENAS/menuinicio.gd" id="1_bdoss"]
+[ext_resource type="FontFile" uid="uid://bwxygnj4ska3o" path="res://fuente/Born2bSportyV10.ttf" id="1_s2vp6"]
+[ext_resource type="Texture2D" uid="uid://budik70slw4dj" path="res://player&sprites/Background chidos/Art/frame0000.png" id="2_6snkn"]
+[ext_resource type="AudioStream" uid="uid://28myhu6nwdto" path="res://Musica/Inicio_Mitski_Ephimero.wav" id="3_mm12h"]
+[ext_resource type="FontFile" uid="uid://gwwex5i870x6" path="res://fuente/PixelifySans-VariableFont_wght.ttf" id="4_kkagy"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rlk2c"]
+bg_color = Color(0.05455, 0.0255, 0.15, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1i5t1"]
+bg_color = Color(0.1104, 0.20896, 0.48, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3yjxd"]
+bg_color = Color(0.054902, 0.027451, 0.14902, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_btdtk"]
+bg_color = Color(0.109804, 0.207843, 0.478431, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s671v"]
+bg_color = Color(0.054902, 0.027451, 0.14902, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wkwwd"]
+bg_color = Color(0.109804, 0.207843, 0.478431, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g2j8f"]
+bg_color = Color(0.054902, 0.027451, 0.14902, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8ctjh"]
+bg_color = Color(0.109804, 0.207843, 0.478431, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qv6t7"]
+bg_color = Color(0.054902, 0.027451, 0.14902, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2ud4l"]
+bg_color = Color(0.109804, 0.207843, 0.478431, 1)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bdoss")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.684544, 0.778025, 0.982187, 1)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 480.0
+offset_bottom = 270.0
+texture = ExtResource("2_6snkn")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -69.0
+offset_top = -175.0
+offset_right = 69.0
+offset_bottom = -19.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 9
+
+[node name="NUEVA" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_s2vp6")
+theme_override_styles/hover = SubResource("StyleBoxFlat_rlk2c")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_1i5t1")
+text = "Nueva Partida"
+
+[node name="CARGAR" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_s2vp6")
+theme_override_styles/hover = SubResource("StyleBoxFlat_3yjxd")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_btdtk")
+text = "Cargar Partida"
+
+[node name="OPCIONES" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_s2vp6")
+theme_override_styles/hover = SubResource("StyleBoxFlat_s671v")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_wkwwd")
+text = "Opciones"
+
+[node name="ACERCA" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_s2vp6")
+theme_override_styles/hover = SubResource("StyleBoxFlat_g2j8f")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_8ctjh")
+text = "Acerca de"
+
+[node name="SALIR" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_s2vp6")
+theme_override_styles/hover = SubResource("StyleBoxFlat_qv6t7")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_2ud4l")
+text = "Salir"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_mm12h")
+autoplay = true
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -135.0
+offset_top = 19.0
+offset_right = 135.0
+offset_bottom = 99.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.98, 0.343, 0.449167, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 2
+theme_override_fonts/font = ExtResource("1_s2vp6")
+theme_override_font_sizes/font_size = 80
+text = "ÉPHIMERO"
+uppercase = true
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 253.0
+offset_right = 142.0
+offset_bottom = 276.0
+theme_override_fonts/font = ExtResource("4_kkagy")
+theme_override_font_sizes/font_size = 13
+text = "beta 1.71"
+
+[connection signal="pressed" from="VBoxContainer/NUEVA" to="." method="_on_nueva_pressed"]
+[connection signal="pressed" from="VBoxContainer/CARGAR" to="." method="_on_cargar_pressed"]
+[connection signal="pressed" from="VBoxContainer/OPCIONES" to="." method="_on_opciones_pressed"]
+[connection signal="pressed" from="VBoxContainer/ACERCA" to="." method="_on_acerca_pressed"]
+[connection signal="pressed" from="VBoxContainer/SALIR" to="." method="_on_salir_pressed"]

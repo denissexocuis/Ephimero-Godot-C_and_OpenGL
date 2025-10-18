@@ -1,0 +1,35 @@
+[gd_scene load_steps=4 format=3 uid="uid://cum3uhbgu6q8j"]
+
+[ext_resource type="FontFile" uid="uid://bwxygnj4ska3o" path="res://fuente/Born2bSportyV10.ttf" id="2"]
+[ext_resource type="Texture2D" uid="uid://tksibvhw1pij" path="res://player&sprites/DIALOGO.png" id="2_0xnam"]
+[ext_resource type="Script" path="res://ESCENAS/DialogPlayer.gd" id="3"]
+
+[node name="DialogPlayer" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("3")
+
+[node name="Background" type="TextureRect" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -224.0
+offset_top = 168.0
+offset_right = 1.0
+offset_bottom = 222.0
+grow_horizontal = 2
+scale = Vector2(1.99966, 1.64888)
+texture = ExtResource("2_0xnam")
+
+[node name="TextLabel" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -208.0
+offset_top = 184.0
+offset_right = -77.0
+offset_bottom = 204.0
+grow_horizontal = 2
+scale = Vector2(1.52381, 1.45241)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2")
+autowrap_mode = 2

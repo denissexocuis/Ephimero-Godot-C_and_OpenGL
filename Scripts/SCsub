@@ -1,0 +1,14 @@
+# SCsub (dentro de 'native/')
+
+# Importar el entorno de compilación de SCons
+Import('env')
+
+# Directorios de búsqueda para las cabeceras
+freeglut_dir = '/usr/include/GL'  # Ruta donde se encuentran las cabeceras de FreeGLUT
+godot_include_dir = '/usr/include/godot'  # Ruta donde se encuentran las cabeceras de Godot
+
+# Añadir las rutas de búsqueda para las cabeceras
+env.Append(CPPPATH=[freeglut_dir, godot_include_dir])
+
+# Especificar las bibliotecas que se necesitarán al compilar
+env.Append(LIBS=['GL', 'GLU', 'freeglut', 'godot'])

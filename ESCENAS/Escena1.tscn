@@ -1,0 +1,34 @@
+[gd_scene load_steps=5 format=3 uid="uid://d4gcqw060egcu"]
+
+[ext_resource type="Script" path="res://ESCENAS/Movimiento.gd" id="1_gwbko"]
+[ext_resource type="PackedScene" uid="uid://derulpwxetmih" path="res://player&sprites/TOMOE/TOMOE.ase" id="1_il2bp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7h5cq"]
+size = Vector2(42.3224, 169.312)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1uyq4"]
+size = Vector2(35, 67)
+
+[node name="Node2D" type="CharacterBody2D"]
+position = Vector2(45, 236)
+script = ExtResource("1_gwbko")
+speed = 100
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 3)
+scale = Vector2(0.330794, 0.33075)
+shape = SubResource("RectangleShape2D_7h5cq")
+
+[node name="TOMOE" parent="." instance=ExtResource("1_il2bp")]
+texture_filter = 1
+scale = Vector2(1.946, 2)
+animation = &"Frente"
+
+[node name="DialogInteractionArea" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DialogInteractionArea"]
+position = Vector2(1.5, -0.5)
+shape = SubResource("RectangleShape2D_1uyq4")

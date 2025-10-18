@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://c7m0vo4mdedq2"]
+
+[ext_resource type="Script" path="res://ESCENAS/dialog_player.gd" id="1_5a5oi"]
+[ext_resource type="FontFile" uid="uid://bwxygnj4ska3o" path="res://fuente/Born2bSportyV10.ttf" id="1_l2xdk"]
+
+[sub_resource type="Gradient" id="Gradient_283ka"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_0213p"]
+gradient = SubResource("Gradient_283ka")
+fill_to = Vector2(0, 0)
+
+[node name="DialogPlayer" type="CanvasLayer"]
+process_mode = 1
+script = ExtResource("1_5a5oi")
+
+[node name="Background" type="TextureRect" parent="."]
+offset_left = 15.0
+offset_top = 111.0
+offset_right = 446.0
+offset_bottom = 178.0
+texture = SubResource("GradientTexture2D_0213p")
+
+[node name="TextLab" type="Label" parent="Background"]
+offset_left = 10.0
+offset_top = 6.0
+offset_right = 165.0
+offset_bottom = 29.0
+theme_override_fonts/font = ExtResource("1_l2xdk")
+text = "Inserte texto dramático :)"
